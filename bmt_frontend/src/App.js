@@ -1,23 +1,27 @@
 import logo from './logo.svg';
+import HeaderComponent from "./components/HeaderComponent";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css';
+import EditProfile from './pages/EditProfile';
+import EditSuivi from './pages/EditSuivi';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <HeaderComponent />
+
+        <div className="container">
+          <Routes>
+            <Route path="/" exact element={<EditSuivi />}></Route>
+            
+            <Route path="/edit-profile" element={<EditProfile />} />
+
+            
+          </Routes>
+        </div>
+      
+      </Router>
     </div>
   );
 }

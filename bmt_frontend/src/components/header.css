@@ -1,0 +1,23 @@
+.topRight {
+  float: right;
+  justify-content: center;
+  padding-left: 700px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  with: 40%;
+}
+ul li {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2em;
+}
+.brand {
+  display: flex;
+}
+.brand p {
+  color: white;
+}
